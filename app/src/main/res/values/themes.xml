@@ -30,8 +30,8 @@
     </style>
 
     <style name="OriginalButtons" parent="Widget.AppCompat.Button">
-        <item name="android:layout_width">85dp</item>
-        <item name="android:layout_height">85dp</item>
         <item name="backgroundTint">@color/md_theme_light_secondary</item>
     </style>
+
+
 </resources>

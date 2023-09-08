@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="buttonMargin">10dp</dimen>
+    <dimen name="buttonHeight">85dp</dimen>
+    <dimen name="buttonWidth">85dp</dimen>
+    <dimen name="equalsButtonWidth">300dp</dimen>
 </resources>

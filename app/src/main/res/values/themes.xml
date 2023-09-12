@@ -29,7 +29,7 @@
     </style>
 
     <style name="OriginalButtons" parent="Widget.AppCompat.Button">
-        <item name="backgroundTint">@color/md_theme_light_secondary</item>
+        <item name="backgroundTint">@color/md_theme_light_outline</item>
     </style>
 
 

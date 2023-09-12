@@ -28,9 +28,9 @@
                 android:layout_height="85dp"
                 android:layout_marginBottom="10dp"
                 android:layout_span="4"
-                android:shadowColor="@color/md_theme_light_onPrimaryContainer"
-                android:shadowDx="1.5"
-                android:shadowDy="1.3"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
                 android:shadowRadius="1.6"
                 android:text=""
                 app:layout_constraintBottom_toTopOf="@+id/tableLayout"
@@ -47,7 +47,7 @@
 
             <Button
                 android:id="@+id/button7"
-                android:onClick="numSelected"
+                android:onClick="onClickMethod"
                 android:layout_width="@dimen/buttonWidth"
                 android:layout_height="@dimen/buttonHeight"
                 style="@style/OriginalButtons"
@@ -58,6 +58,7 @@
             <Button
                 android:id="@+id/button8"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
                 style="@style/OriginalButtons"
                 android:text="8"
@@ -67,6 +68,7 @@
             <Button
                 android:id="@+id/button9"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
                 style="@style/OriginalButtons"
                 android:text="9"
@@ -76,6 +78,7 @@
             <Button
                 android:id="@+id/buttonDivide"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
                 style="@style/OriginalButtons"
                 android:text="/"
@@ -93,6 +96,7 @@
                 style="@style/OriginalButtons"
                 android:text="4"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button7" />
@@ -100,24 +104,30 @@
             <Button
                 android:id="@+id/button5"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="5"
+                style="@style/OriginalButtons"
+                android:text="5"
                 app:layout_constraintStart_toEndOf="@+id/button4"
                 app:layout_constraintTop_toBottomOf="@+id/button8" />
 
             <Button
                 android:id="@+id/button6"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="6"
+                style="@style/OriginalButtons"
+                android:text="6"
                 app:layout_constraintStart_toEndOf="@+id/button5"
                 app:layout_constraintTop_toBottomOf="@+id/button9" />
 
             <Button
                 android:id="@+id/buttonMultiply"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="*"
+                style="@style/OriginalButtons"
+                android:text="*"
                 app:layout_constraintStart_toEndOf="@+id/button6"
                 app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
@@ -131,32 +141,40 @@
             <Button
                 android:id="@+id/button1"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="1"
+                style="@style/OriginalButtons"
+                android:text="1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button4" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="2"
+                style="@style/OriginalButtons"
+                android:text="2"
                 app:layout_constraintStart_toEndOf="@+id/button1"
                 app:layout_constraintTop_toBottomOf="@+id/button5" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="3"
+                style="@style/OriginalButtons"
+                android:text="3"
                 app:layout_constraintStart_toEndOf="@+id/button2"
                 app:layout_constraintTop_toBottomOf="@+id/button6" />
 
             <Button
                 android:id="@+id/buttonSubtract"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="-"
+                style="@style/OriginalButtons"
+                android:text="-"
                 app:layout_constraintStart_toEndOf="@+id/button3"
                 app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
         </TableRow>
@@ -169,24 +187,30 @@
             <Button
                 android:id="@+id/button0"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="0"
+                style="@style/OriginalButtons"
+                android:text="0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button1" />
 
             <Button
                 android:id="@+id/buttonDot"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="."
+                style="@style/OriginalButtons"
+                android:text="."
                 app:layout_constraintStart_toEndOf="@+id/button0"
                 app:layout_constraintTop_toBottomOf="@+id/button2" />
 
             <Button
                 android:id="@+id/buttonNegative"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="(-)"
+                style="@style/OriginalButtons"
+                android:text="(-)"
                 app:layout_constraintStart_toEndOf="@+id/buttonDot"
                 app:layout_constraintTop_toBottomOf="@+id/button3" />
 
@@ -194,8 +218,10 @@
             <Button
                 android:id="@+id/buttonAdd"
                 android:layout_width="@dimen/buttonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:text="+"
+                style="@style/OriginalButtons"
+                android:text="+"
                 app:layout_constraintStart_toEndOf="@+id/buttonNegative"
                 app:layout_constraintTop_toBottomOf="@+id/buttonSubtract" />
         </TableRow>
@@ -208,8 +234,10 @@
             <Button
                 android:id="@+id/buttonEquals"
                 android:layout_width="@dimen/equalsButtonWidth"
+                android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
-                style="@style/OriginalButtons"                android:layout_span="4"
+                style="@style/OriginalButtons"
+                android:layout_span="4"
                 android:text="="
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

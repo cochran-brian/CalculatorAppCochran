@@ -13,17 +13,24 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    double output;
+    int indexCount;
+    String key;
+    Array strList;
+    Array numList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        strList = Array;
+        numList = new ArrayList<>();
+        key = "";
+        output = 0.0;
+        indexCount = 0;
     }
 
-    double output = 0.0;
-    int indexCount = 0;
-    String key = "";
-    ArrayList<String> strList = new ArrayList<>();
-    ArrayList<Double> numList = new ArrayList<>();
+
     public void concatValue(int num) {
         if(num == -2){
             strList.set(indexCount, strList.get(indexCount) + ".");
@@ -53,11 +60,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void onClick(View v) {
+    public void onClickMethod(View v) {
         if(v.getId() == R.id.buttonDivide){
             if(numList.size() == 2) {
-                numList.set(0, (numList.get(0) / numList.get(1));
-                strList.set(0, numList(0).toString());
+                numList.set(0, (numList.get(0) / numList.get(1)));
+                strList.set(0, numList.get(0).toString());
                 displayValue(strList.get(0));
             } else {
                 indexCount++;
@@ -66,18 +73,18 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(v.getId() == R.id.buttonMultiply){
             if(numList.size() == 2) {
-                numList.set(0, (numList.get(0) * numList.get(1));
-                strList.set(0, numList(0).toString());
+                numList.set(0, (numList.get(0) * numList.get(1)));
+                strList.set(0, numList.get(0).toString());
                 displayValue(strList.get(0));
             } else {
                 indexCount++;
-                key = "m"
+                key = "m";
             }
         }
         else if(v.getId() == R.id.buttonAdd){
             if(numList.size() == 2) {
-                numList.set(0, (numList.get(0) + numList.get(1));
-                strList.set(0, numList(0).toString());
+                numList.set(0, (numList.get(0) + numList.get(1)));
+                strList.set(0, numList.get(0).toString());
                 displayValue(strList.get(0));
             } else {
                 indexCount++;
@@ -86,8 +93,8 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(v.getId() == R.id.buttonSubtract){
             if(numList.size() == 2) {
-                numList.set(0, (numList.get(0) - numList.get(1));
-                strList.set(0, numList(0).toString());
+                numList.set(0, (numList.get(0) - numList.get(1)));
+                strList.set(0, numList.get(0).toString());
                 displayValue(strList.get(0));
             } else {
                 indexCount++;
@@ -96,29 +103,28 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(v.getId() == R.id.buttonEquals){
             if(key.equals("d")) {
-                numList.set(0, (numList.get(0) / numList.get(1));
-                strList.set(0, numList(0).toString());
+                numList.set(0, (numList.get(0) / numList.get(1)));
+                strList.set(0, numList.get(0).toString());
                 displayValue(strList.get(0));
             }
             else if(key.equals("m")) {
-                numList.set(0, (numList.get(0) * numList.get(1));
-                strList.set(0, numList(0).toString());
+                numList.set(0, (numList.get(0) * numList.get(1)));
+                strList.set(0, numList.get(0).toString());
                 displayValue(strList.get(0));
             }
             else if(key.equals("a")) {
-                numList.set(0, (numList.get(0) + numList.get(1));
-                strList.set(0, numList(0).toString());
+                numList.set(0, (numList.get(0) + numList.get(1)));
+                strList.set(0, numList.get(0).toString());
                 displayValue(strList.get(0));
             }
             else {
-                numList.set(0, (numList.get(0) - numList.get(1));
-                strList.set(0, numList(0).toString());
+                numList.set(0, (numList.get(0) - numList.get(1)));
+                strList.set(0, numList.get(0).toString());
                 displayValue(strList.get(0));
             }
         }
         else {
             concatValue(numSelected(v));
-            displayValue();
         }
     }
 

@@ -2,6 +2,7 @@ package com.example.calculatorappcochran;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -201,13 +202,169 @@ public class MainActivity extends AppCompatActivity {
                 result = Double.parseDouble(display.getText().toString().substring(0, subtract)) -
                         Double.parseDouble(display.getText().toString().substring(subtract+1));
             }
+            if(subtract < 0 && add < 0 && divide < 0 && multiply < 0) {
+                return;
+            }
             display.setText("" + result);
         }
         else if(numSelected(v).equals("C")) {
             display.setText("");
         }
         else {
-            display.setText("" + display.getText() + numSelected(v));
+            String result = numSelected(v);
+            if(numSelected(v).equals("/")) {
+                if (display.getText().toString().contains("/")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("/")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("/"))) /
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("/")+1)));
+                    display.setText(result + "/");
+                    return;
+                }
+                if (display.getText().toString().contains("*")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("*")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("*"))) *
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("*")+1)));
+                    display.setText(result + "/");
+                    return;
+                }
+                if (display.getText().toString().contains("+")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("+")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("+"))) +
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("+")+1)));
+                    display.setText(result + "/");
+                    return;
+                }
+                if (display.getText().toString().contains("-")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("-")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("-"))) -
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("-")+1)));
+                    display.setText(result + "/");
+                    return;
+                }
+            }
+            if(numSelected(v).equals("*")) {
+                if (display.getText().toString().contains("/")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("/")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("/"))) /
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("/")+1)));
+                    display.setText(result + "*");
+                    return;
+                }
+                if (display.getText().toString().contains("*")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("*")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("*"))) *
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("*")+1)));
+                    display.setText(result + "*");
+                    return;
+                }
+                if (display.getText().toString().contains("+")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("+")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("+"))) +
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("+")+1)));
+                    display.setText(result + "*");
+                    return;
+                }
+                if (display.getText().toString().contains("-")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("-")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("-"))) -
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("-")+1)));
+                    display.setText(result + "*");
+                    return;
+                }
+            }
+            if(numSelected(v).equals("+")) {
+                if (display.getText().toString().contains("/")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("/")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("/"))) /
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("/")+1)));
+                    display.setText(result + "+");
+                    return;
+                }
+                if (display.getText().toString().contains("*")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("*")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("*"))) *
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("*")+1)));
+                    display.setText(result + "+");
+                    return;
+                }
+                if (display.getText().toString().contains("+")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("+")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("+"))) +
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("+")+1)));
+                    display.setText(result + "+");
+                    return;
+                }
+                if (display.getText().toString().contains("-")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("-")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("-"))) -
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("-")+1)));
+                    display.setText(result + "+");
+                    return;
+                }
+            }
+            if(numSelected(v).equals("-")) {
+                if (display.getText().toString().contains("/")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("/")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("/"))) /
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("/")+1)));
+                    display.setText(result + "-");
+                    return;
+                }
+                if (display.getText().toString().contains("*")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("*")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("*"))) *
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("*")+1)));
+                    display.setText(result + "-");
+                    return;
+                }
+                if (display.getText().toString().contains("+")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("+")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("+"))) +
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("+")+1)));
+                    display.setText(result + "-");
+                    return;
+                }
+                if (display.getText().toString().contains("-")) {
+                    if(display.getText().toString().substring(display.getText().toString().indexOf("-")+1).length() < 1){
+                        return;
+                    }
+                    result = "" + (Double.parseDouble(display.getText().toString().substring(0, display.getText().toString().indexOf("-"))) -
+                            Double.parseDouble(display.getText().toString().substring(display.getText().toString().indexOf("-")+1)));
+                    display.setText(result + "-");
+                    return;
+                }
+            }
+            display.setText("" + display.getText() + result);
         }
     }
 

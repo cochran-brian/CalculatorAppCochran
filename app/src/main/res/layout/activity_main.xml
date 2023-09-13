@@ -29,9 +29,12 @@
                 android:layout_marginBottom="10dp"
                 android:text=""
                 android:textAlignment="textEnd"
+
+                android:paddingEnd="25dp"
                 android:layout_span="4"
-                android:textSize="30dp"
+                android:textSize="40sp"
                 android:background="#EDEDED"
+                android:gravity="center_vertical"
                 app:layout_constraintBottom_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -210,7 +213,7 @@
                 android:onClick="onClickMethod"
                 android:layout_height="@dimen/buttonHeight"
                 style="@style/OriginalButtons"
-                android:text="(-)"
+                android:text="C"
                 app:layout_constraintStart_toEndOf="@+id/buttonDot"
                 app:layout_constraintTop_toBottomOf="@+id/button3" />
 

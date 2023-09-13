@@ -175,12 +175,13 @@ public class MainActivity extends AppCompatActivity {
             return "/";
         }
         else {
-            return "~"; // negative symbol
+            return "C";
         }
     }
 
-    public void onButtonClickEvent(View v) {
+    public void onClickMethod(View v) {
         TextView display = findViewById(R.id.textDisplay);
+
         if(v.getId() == R.id.buttonEquals) {
             double result = 0.0;
             int divide = display.getText().toString().indexOf("/");
@@ -201,7 +202,11 @@ public class MainActivity extends AppCompatActivity {
                         Double.parseDouble(display.getText().toString().substring(subtract+1));
             }
             display.setText("" + result);
-        } else {
+        }
+        else if(numSelected(v).equals("C")) {
+            display.setText("");
+        }
+        else {
             display.setText("" + display.getText() + numSelected(v));
         }
     }

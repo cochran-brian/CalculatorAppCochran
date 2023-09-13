@@ -4,4 +4,7 @@
     <dimen name="buttonHeight">85dp</dimen>
     <dimen name="buttonWidth">85dp</dimen>
     <dimen name="equalsButtonWidth">300dp</dimen>
+    <dimen name="fontSizeLarge">40sp</dimen>
+    <dimen name="fontSizeNormal">30sp</dimen>
+    <dimen name="padding">25dp</dimen>
 </resources>

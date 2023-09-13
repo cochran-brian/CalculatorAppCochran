@@ -14,121 +14,12 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-//    double output;
-//    int indexCount;
-//    String key;
-//    String[] strList;
-//    double[] numList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        strList = new String[2];
-//        numList = new double[2];
-//        key = "";
-//        output = 0.0;
-//        indexCount = 0;
     }
 
-
-//    public void concatValue(int num) {
-//        if(num == -2){
-//            strList[indexCount] = strList[indexCount] + ".";
-//            numList[indexCount] = Double.parseDouble(strList[indexCount]);
-//            displayValue(strList[indexCount]);
-//        }
-//        else if(num == -1){
-//            strList[indexCount] = "-" + strList[indexCount];
-//            numList[indexCount] = Double.parseDouble(strList[indexCount]);
-//            displayValue(strList[indexCount]);
-//        }
-//        else {
-//            strList[indexCount] = strList[indexCount] + num;
-//            numList[indexCount] = Double.parseDouble(strList[indexCount]);
-//            displayValue(strList[indexCount]);
-//        }
-//    }
-//
-//    public void concatValue(String str) {
-//        strList[indexCount] = strList[indexCount] + str;
-//        displayValue(strList[indexCount]);
-//    }
-//
-//    public void displayValue(String str) {
-//        TextView display = findViewById(R.id.textDisplay);
-//        display.setText(str);
-//    }
-//
-//
-//    public void onClickMethod(View v) {
-//        if(v.getId() == R.id.buttonDivide){
-//            if(numList.length == 2) {
-//                numList[0] = (numList[0] / numList[1]);
-//                strList[0] = "" + numList[0];
-//                displayValue(strList[0]);
-//            } else {
-//                indexCount++;
-//                key = "d";
-//            }
-//        }
-//        else if(v.getId() == R.id.buttonMultiply){
-//            if(numList.length == 2) {
-//                numList[0] = (numList[0] * numList[1]);
-//                strList[0] = "" + numList[0];
-//                displayValue(strList[0]);
-//            } else {
-//                indexCount++;
-//                key = "m";
-//            }
-//        }
-//        else if(v.getId() == R.id.buttonAdd){
-//            if(numList.length == 2) {
-//                numList[0] = (numList[0] + numList[1]);
-//                strList[0] = "" + numList[0];
-//                displayValue(strList[0]);
-//            } else {
-//                indexCount++;
-//                key="a";
-//            }
-//        }
-//        else if(v.getId() == R.id.buttonSubtract){
-//            if(numList.length == 2) {
-//                numList[0] = (numList[0] - numList[1]);
-//                strList[0] = "" + numList[0];
-//                displayValue(strList[0]);
-//            } else {
-//                indexCount++;
-//                key = "s";
-//            }
-//        }
-//        else if(v.getId() == R.id.buttonEquals){
-//            if(key.equals("d")) {
-//                numList[0] = (numList[0] / numList[1]);
-//                strList[0] = "" + numList[0];
-//                displayValue(strList[0]);
-//            }
-//            else if(key.equals("m")) {
-//                numList[0] = (numList[0] / numList[1]);
-//                strList[0] = "" + numList[0];
-//                displayValue(strList[0]);
-//            }
-//            else if(key.equals("a")) {
-//                numList[0] = (numList[0] / numList[1]);
-//                strList[0] = "" + numList[0];
-//                displayValue(strList[0]);
-//            }
-//            else {
-//                numList[0] = (numList[0] / numList[1]);
-//                strList[0] = "" + numList[0];
-//                displayValue(strList[0]);
-//            }
-//        }
-//        else {
-//            concatValue(numSelected(v));
-//        }
-//    }
-//
     public String numSelected(View v) {
         if(v.getId() == R.id.button0){
             return "0";

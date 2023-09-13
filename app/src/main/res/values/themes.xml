@@ -30,17 +30,17 @@
 
     <style name="OriginalButtons" parent="Widget.AppCompat.Button">
         <item name="backgroundTint">#BABABA</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">@dimen/fontSizeNormal</item>
     </style>
 
     <style name="EqualsButtons" parent="Widget.AppCompat.Button">
         <item name="backgroundTint">@color/md_theme_dark_onTertiary</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">@dimen/fontSizeNormal</item>
     </style>
 
     <style name="FunctionButtons" parent="Widget.AppCompat.Button">
         <item name="backgroundTint">@color/md_theme_light_tertiary</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">@dimen/fontSizeNormal</item>
     </style>
 
 
